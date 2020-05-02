@@ -1,15 +1,10 @@
 package BrowserUtils;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
-import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFTable;
 import org.apache.poi.xssf.usermodel.XSSFTableColumn;
@@ -65,16 +60,6 @@ public class GetData {
 			}
 		}
 		return RowValues;
-	}
-
-
-	public void get_dataColumn(XSSFSheet SheetValue,String TestcaseName) {
-		ColValues = new LinkedList<String>();
-		List<XSSFTable> table = SheetValue.getTables();
-		XSSFTable tab = table.get(0);
-		List<XSSFTableColumn> Column = tab.getColumns();
-
-
 	}
 
 	public HashMap<String,String> GetDataByTestCase(String SheetName,String TestcaseName) {
