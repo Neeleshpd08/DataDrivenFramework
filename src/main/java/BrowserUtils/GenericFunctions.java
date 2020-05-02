@@ -51,7 +51,7 @@ public class GenericFunctions extends Browserlaunch {
 		}
 		catch (Exception ex)
 		{
-			report.Log("Exception:"+ex.getMessage());
+			report.Log(status.Fail,"Exception:"+ex.getMessage());
 		}
 	}
 
@@ -69,7 +69,7 @@ public class GenericFunctions extends Browserlaunch {
 		}
 		catch (Exception ex)
 		{
-			report.Log(this.control_name + " not found!");
+			report.Log(status.Fail,this.control_name + " not found!");
 			throw new ElementNotVisibleException(ex.getMessage());
 		}
 		return element;
@@ -90,7 +90,7 @@ public class GenericFunctions extends Browserlaunch {
 				}
 				element.click();
 				IsSuccessfull = true;
-				report.Log("Clicked on " + this.control_name);
+				report.Log(status.Pass,"Clicked on " + this.control_name);
 				break;
 			}
 			catch (StaleElementReferenceException st)
@@ -110,7 +110,7 @@ public class GenericFunctions extends Browserlaunch {
 			}
 		}
 		if (i == 200)
-			report.Log("Not able to click on"+this.control_name+"element.\n\n");
+			report.Log(status.Fail,"Not able to click on"+this.control_name+"element.\n\n");
 	}
 
 	public void SetText(String text) {
@@ -119,7 +119,7 @@ public class GenericFunctions extends Browserlaunch {
 		{
 			element.clear();
 			element.sendKeys(text);
-			report.Log("Setting text '" + text + "' in " + this.control_name);
+			report.Log(status.Pass,"Setting text '" + text + "' in " + this.control_name);
 		}
 		catch (InvalidElementStateException ex)
 		{
@@ -143,7 +143,7 @@ public class GenericFunctions extends Browserlaunch {
 		element = GetElement();
 		try {
 			action.doubleClick(element).perform();
-			report.Log("Double Click on" + this.control_name);
+			report.Log(status.Pass,"Double Click on" + this.control_name);
 		}
 		catch(Exception ex) {
 			throw new ElementNotVisibleException(String.format("Not able to Double click on"+ this.control_name+ "control!\""));
@@ -154,7 +154,7 @@ public class GenericFunctions extends Browserlaunch {
 		element = GetElement();
 		try {
 			action.moveToElement(element).perform();
-			report.Log("Mouse hover on"+this.control_name);
+			report.Log(status.Pass,"Mouse hover on"+this.control_name);
 		}
 		catch(Exception ex) {
 			throw new NoSuchElementException("Mouse hover element not found"+ex.getMessage());
@@ -166,7 +166,7 @@ public class GenericFunctions extends Browserlaunch {
 		try {
 			select=new Select(element);
 			select.selectByVisibleText(textName);
-			report.Log("Selected value is"+textName+ "From"+ this.control_name);
+			report.Log(status.Pass,"Selected value is"+textName+ "From"+ this.control_name);
 		}
 		catch(Exception ex) {
 			throw new NoSuchElementException("value is not Selected"+ex.getMessage()+" "+this.control_name);
@@ -178,7 +178,7 @@ public class GenericFunctions extends Browserlaunch {
 		try {
 			select=new Select(element);
 			select.selectByVisibleText(index);
-			report.Log("Selected value is"+index+ "From"+ this.control_name);
+			report.Log(status.Pass,"Selected value is"+index+ "From"+ this.control_name);
 		}
 		catch(Exception ex) {
 			throw new NoSuchElementException("value is not Selected"+ex.getMessage()+" "+this.control_name);
@@ -200,7 +200,7 @@ public class GenericFunctions extends Browserlaunch {
 		List<WebElement> matchingElement = null;
 		try {
 			matchingElement = Browserlaunch.driver.findElements(this._by);
-			report.Log("Selected Element is"+this.control_name);
+			report.Log(status.Pass,"Selected Element is"+this.control_name);
 		}
 		catch(Exception ex) {
 			throw new ElementNotVisibleException(this.control_name + "Element not found");
@@ -212,7 +212,7 @@ public class GenericFunctions extends Browserlaunch {
 		element = GetElement();
 		try {
 			element.isDisplayed();
-			report.Log(this.control_name + "Element is displayed");
+			report.Log(status.Pass,this.control_name + "Element is displayed");
 		}
 		catch(Exception ex) {
 			throw new ElementNotVisibleException(this.control_name +"No found");
@@ -223,7 +223,7 @@ public class GenericFunctions extends Browserlaunch {
 		element = GetElement();
 		try {
 			element.sendKeys(key);
-			report.Log(this.control_name + " key entered");
+			report.Log(status.Pass,this.control_name + "Keyboard key call");
 		}
 		catch(Exception ex) {
 			throw new ElementNotVisibleException(this.control_name + "Key not found");
@@ -240,4 +240,5 @@ public class GenericFunctions extends Browserlaunch {
 			throw new ElementNotVisibleException(ex.getMessage());
 		}
 	}	
+
 }

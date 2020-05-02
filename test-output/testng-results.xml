@@ -1,43 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22862" started-at="2020-04-28T14:40:48Z" finished-at="2020-04-28T14:41:11Z">
+  <suite name="Default suite" duration-ms="34798" started-at="2020-05-02T09:57:49Z" finished-at="2020-05-02T09:58:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22862" started-at="2020-04-28T14:40:48Z" finished-at="2020-04-28T14:41:11Z">
+    <test name="Default test" duration-ms="34798" started-at="2020-05-02T09:57:49Z" finished-at="2020-05-02T09:58:23Z">
       <class name="Testcase.GoogleTestcase">
-        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeSuite" is-config="true" duration-ms="90" started-at="2020-04-28T14:40:48Z" finished-at="2020-04-28T14:40:48Z">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeSuite" is-config="true" duration-ms="158" started-at="2020-05-02T09:57:49Z" finished-at="2020-05-02T09:57:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeTest" is-config="true" duration-ms="7756" started-at="2020-04-28T14:40:48Z" finished-at="2020-04-28T14:40:56Z">
+        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeTest" is-config="true" duration-ms="10703" started-at="2020-05-02T09:57:49Z" finished-at="2020-05-02T09:57:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LaunchChromeDriver status=SUCCESS method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=LaunchChromeDriver status=FAILURE method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b]" name="LaunchChromeDriver" duration-ms="4352" started-at="2020-04-28T14:40:56Z" finished-at="2020-04-28T14:41:00Z">
+        <test-method status="FAIL" signature="LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b]" name="LaunchChromeDriver" duration-ms="5287" started-at="2020-05-02T09:57:59Z" finished-at="2020-05-02T09:58:05Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test case failed due to assert fail expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test case failed due to assert fail expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at Testcase.GoogleTestcase.LaunchChromeDriver(GoogleTestcase.java:17)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchChromeDriver -->
-        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterTest" is-config="true" duration-ms="0" started-at="2020-04-28T14:41:00Z" finished-at="2020-04-28T14:41:00Z">
+        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterTest" is-config="true" duration-ms="2382" started-at="2020-05-02T09:58:05Z" finished-at="2020-05-02T09:58:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LaunchChromeDriver status=SUCCESS method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=LaunchChromeDriver status=FAILURE method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeTest" is-config="true" duration-ms="8001" started-at="2020-04-28T14:41:00Z" finished-at="2020-04-28T14:41:08Z">
+        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeTest" is-config="true" duration-ms="11099" started-at="2020-05-02T09:58:07Z" finished-at="2020-05-02T09:58:18Z">
           <params>
             <param index="0">
               <value>
@@ -48,11 +86,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@2925bf5b]" name="ChromeDriverLaunch" duration-ms="2737" started-at="2020-04-28T14:41:08Z" finished-at="2020-04-28T14:41:11Z">
+        <test-method status="PASS" signature="ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@2925bf5b]" name="ChromeDriverLaunch" duration-ms="4101" started-at="2020-05-02T09:58:18Z" finished-at="2020-05-02T09:58:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChromeDriverLaunch -->
-        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterTest" is-config="true" duration-ms="0" started-at="2020-04-28T14:41:11Z" finished-at="2020-04-28T14:41:11Z">
+        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterTest" is-config="true" duration-ms="1174" started-at="2020-05-02T09:58:22Z" finished-at="2020-05-02T09:58:23Z">
           <params>
             <param index="0">
               <value>
@@ -63,7 +101,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterSuite" is-config="true" duration-ms="206" started-at="2020-04-28T14:41:11Z" finished-at="2020-04-28T14:41:11Z">
+        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterSuite" is-config="true" duration-ms="546" started-at="2020-05-02T09:58:24Z" finished-at="2020-05-02T09:58:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterSuite -->

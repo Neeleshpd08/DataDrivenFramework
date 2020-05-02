@@ -1,9 +1,9 @@
 package Testcase;
 import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import BrowserUtils.Browserlaunch;
 import BrowserUtils.TestBase;
+import BrowserUtils.status;
 import BusinessUtils.ControlProperties;
 
 public class GoogleTestcase extends TestBase {
@@ -14,10 +14,9 @@ public class GoogleTestcase extends TestBase {
 			ControlProperties.googleText.waitForElementReady(60);
 			ControlProperties.googleText.SetText(data.get("Name"));
 			ControlProperties.googleText.EnterKey(Keys.ENTER);
-			Browserlaunch.driver.quit();
-			Log("Browser Closed");
+			Assert.assertTrue(false,"Test case failed due to assert fail");
 		}catch(Exception ex) {
-			Log("Test is not working"+ex.getMessage());
+			Log(status.Fail,"Test is not working"+ex.getMessage());
 		}
 	}
 
@@ -27,10 +26,8 @@ public class GoogleTestcase extends TestBase {
 			ControlProperties.googleText.waitForElementReady(60);
 			ControlProperties.googleText.SetText(data.get("Name"));
 			ControlProperties.googleText.EnterKey(Keys.ENTER);
-			Browserlaunch.driver.quit();
-			Log("Browser Closed");
 		}catch(Exception ex) {
-			Log("Test is not working"+ex.getMessage());
+			Log(status.Fail,"Test is not working"+ex.getMessage());
 		}
 	}
 }

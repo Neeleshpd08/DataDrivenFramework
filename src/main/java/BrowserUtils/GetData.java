@@ -3,8 +3,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+
+import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFTable;
@@ -33,7 +37,7 @@ public class GetData {
 	}
 
 	public List<String> GetColumnValue(XSSFSheet SheetValue){
-		ColValues = new ArrayList<String>();
+		ColValues = new LinkedList<String>();
 		List<XSSFTable> table = SheetValue.getTables();
 		XSSFTable tab = table.get(0);
 		List<XSSFTableColumn> Column = tab.getColumns();
@@ -43,28 +47,34 @@ public class GetData {
 		return ColValues;
 	}
 
-	public List<String> GetRowValue(XSSFSheet SheetValue,String TestcaseName){
-		RowValues = new ArrayList<String>();
-		List<XSSFTable> table = SheetValue.getTables();
-		XSSFTable tab = table.get(0);
-		int rowCount = tab.getRowCount();
-		for (int i = 0; i < rowCount; i++) {
-			XSSFRow row = SheetValue.getRow(i);
-			Iterator<Cell> r =  row.iterator();
-			while(r.hasNext()) {
-				if(r.next().toString().contains(TestcaseName))
-				{
-					while(r.hasNext()) {
-						RowValues.add(r.next().toString());
+	public List<String> GetRowValue(String SheetValue,String TestcaseName){
+		RowValues = new LinkedList<String>();
+		XSSFSheet sheet = workBook.getSheet(SheetValue);
+		for (Row row : sheet) { // For each Row.
+			Cell cell = row.getCell(0); // Get the Cell at the Index / Column you want.
+			if(cell != null) {
+				if(cell.getStringCellValue().equalsIgnoreCase(TestcaseName)) {
+					System.out.println(cell.getRow().getLastCellNum());
+					for(int i=1;i<=cell.getRow().getLastCellNum();i++) {
+						RowValues.add(String.valueOf(cell.getRow().getCell(i)));
 					}
 				}
-				else
-				{
-					break;
-				}
+			}
+			else {
+				break;
 			}
 		}
 		return RowValues;
+	}
+
+
+	public void get_dataColumn(XSSFSheet SheetValue,String TestcaseName) {
+		ColValues = new LinkedList<String>();
+		List<XSSFTable> table = SheetValue.getTables();
+		XSSFTable tab = table.get(0);
+		List<XSSFTableColumn> Column = tab.getColumns();
+
+
 	}
 
 	public HashMap<String,String> GetDataByTestCase(String SheetName,String TestcaseName) {
@@ -73,10 +83,10 @@ public class GetData {
 			if(workBook.getSheetName(i).equalsIgnoreCase(SheetName)) {
 				sheet = workBook.getSheetAt(i);
 				List<String> col = GetColumnValue(sheet);
-				List<String> row = GetRowValue(sheet,TestcaseName);
+				List<String> row = GetRowValue(SheetName,TestcaseName);
 				map = new HashMap<String,String>();
 				for (int j = 0; j < row.size(); j++) {
-						map.put(col.get(j),row.get(j));
+					map.put(col.get(j),row.get(j));
 				}
 			}
 		}
