@@ -11,7 +11,8 @@ public class Browserlaunch {
 	public static WebDriver driver = null;
 	private String destination = System.getProperty("user.dir");
 	
-	public void browserLaunch(String driverName,String URL) {	    
+	public void browserLaunch(String driverName,String URL) {
+		System.out.println("=============="+ driverName + "===============");
 		if("chrome" == driverName) {
 			System.setProperty("webdriver.chrome.driver",destination+"\\Resources\\chromedriver.exe");
 			driver=new ChromeDriver();
