@@ -21,6 +21,7 @@ public class TestBase extends GenericReport {
 			
 	@BeforeSuite
 	public void BeforeSuite() throws IOException {
+		System.out.println("=============="+ browsername + "===============");
 		GenerateReport();
 	}
 
@@ -29,6 +30,7 @@ public class TestBase extends GenericReport {
 		String testName = result.getMethod().getMethodName();
 		data = ExcelData.GetDataByTestCase("Data", testName);
 		CreateTest(result.getMethod().getMethodName());
+		System.out.println("=============="+ browsername + "===============");
 		launch.browserLaunch(browser,"https://www.google.com");
 	}
 
