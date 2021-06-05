@@ -17,6 +17,7 @@ public class TestBase extends GenericReport {
 	private String Excelpath = "\\Resources\\TestData.xlsx";
 	GetData ExcelData=new GetData(Excelpath);
 	public Browserlaunch launch=new Browserlaunch();
+	String browser = System.getProperty("browser");
 			
 	@BeforeSuite
 	public void BeforeSuite() throws IOException {
@@ -28,7 +29,7 @@ public class TestBase extends GenericReport {
 		String testName = result.getMethod().getMethodName();
 		data = ExcelData.GetDataByTestCase("Data", testName);
 		CreateTest(result.getMethod().getMethodName());
-		launch.browserLaunch("chrome","https://www.google.com");
+		launch.browserLaunch(browser,"https://www.google.com");
 	}
 
 	@AfterMethod
