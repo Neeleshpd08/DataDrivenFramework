@@ -13,7 +13,7 @@ public class Browserlaunch {
 	
 	public void browserLaunch(String driverName,String URL) {
 		System.out.println("=============="+ driverName + "===============");
-		if("chrome" == driverName) {
+		if("chrome" == driverName.toString()) {
 			System.setProperty("webdriver.chrome.driver",destination+"\\Resources\\chromedriver.exe");
 			driver=new ChromeDriver();
 		}
