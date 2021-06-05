@@ -12,8 +12,8 @@ public class Browserlaunch {
 	private String destination = System.getProperty("user.dir");
 	
 	public void browserLaunch(String driverName,String URL) {
-		System.out.println("=============="+ driverName + "===============");
 		if("chrome" == driverName) {
+			System.out.println("=============="+ driverName + "===============");
 			System.setProperty("webdriver.chrome.driver",destination+"\\Resources\\chromedriver.exe");
 			driver=new ChromeDriver();
 		}
@@ -30,6 +30,7 @@ public class Browserlaunch {
 		}
 		else {
 			System.out.println("please choose driver");
+			System.out.println("=============="+ driverName + "===============");
 		}
 		driver.navigate().to(URL);
 		driver.manage().window().maximize();
