@@ -12,21 +12,21 @@ public class Browserlaunch {
 	private String destination = System.getProperty("user.dir");
 	
 	public void browserLaunch(String driverName,String URL) {
-		String browse = (driverName.trim());
-		if("chrome" == browse) {
+		
+		if(driverName.equals("chrome")) {
 			System.out.println("=============="+ driverName + "===============");
 			System.setProperty("webdriver.chrome.driver",destination+"\\Resources\\chromedriver.exe");
 			driver=new ChromeDriver();
 		}
-		else if("IE" == browse) {
+		else if(driverName.equals("IE")) {
 			System.setProperty("webdriver.ie.driver",destination+"\\Resources\\IEDriverServer.exe");
 			driver =new InternetExplorerDriver(); 
 		}
-		else if("Firefox" == browse) {
+		else if(driverName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",destination+"\\Resources\\geckodriver.exe");
 			driver =new FirefoxDriver();
 		}
-		else if("Safari" == browse) {
+		else if(driverName.equals("Safari")) {
 			driver =new SafariDriver();
 		}
 		else {
