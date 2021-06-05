@@ -5,6 +5,7 @@
     <classes>
       <class name="Testcase.GoogleTestcase">
         <methods>
+          <include name="ChromeDriverLaunch"/>
           <include name="BeforeSuite"/>
           <include name="AfterSuite"/>
           <include name="LaunchChromeDriver"/>

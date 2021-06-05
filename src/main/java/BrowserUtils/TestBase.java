@@ -12,7 +12,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 public class TestBase extends GenericReport {
-
 	Properties p=new Properties();
 	public HashMap<String,String> data;
 	private String Excelpath = "\\Resources\\TestData.xlsx";
@@ -55,7 +54,6 @@ public class TestBase extends GenericReport {
 			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 			TakesScreenshot ts=(TakesScreenshot) driver;
 			File source = ts.getScreenshotAs(OutputType.FILE);
-
 			destination = System.getProperty("user.dir") + "/Screenshots/" + screenshotName + dateName +".png";
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source,finalDestination);

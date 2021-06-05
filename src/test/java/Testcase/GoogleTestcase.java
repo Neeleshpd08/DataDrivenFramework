@@ -14,7 +14,7 @@ public class GoogleTestcase extends TestBase {
 			ControlProperties.googleText.waitForElementReady(60);
 			ControlProperties.googleText.SetText(data.get("Name"));
 			ControlProperties.googleText.EnterKey(Keys.ENTER);
-			Assert.assertTrue(false,"Test case failed due to assert fail");
+			//Assert.assertTrue(false,"Test case failed due to assert fail");
 		}catch(Exception ex) {
 			Log(status.Fail,"Test is not working"+ex.getMessage());
 		}

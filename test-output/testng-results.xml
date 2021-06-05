@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="37611" started-at="2020-05-02T10:57:15Z" finished-at="2020-05-02T10:57:52Z">
+  <suite name="Suite" duration-ms="36246" started-at="2021-06-05T02:19:34Z" finished-at="2021-06-05T02:20:10Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="37611" started-at="2020-05-02T10:57:15Z" finished-at="2020-05-02T10:57:52Z">
+    <test name="Test" duration-ms="36246" started-at="2021-06-05T02:19:34Z" finished-at="2021-06-05T02:20:10Z">
       <class name="Testcase.GoogleTestcase">
-        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeSuite" is-config="true" duration-ms="187" started-at="2020-05-02T10:57:14Z" finished-at="2020-05-02T10:57:15Z">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:Testcase.GoogleTestcase@1ff4931d]" name="BeforeSuite" is-config="true" duration-ms="91" started-at="2021-06-05T02:19:34Z" finished-at="2021-06-05T02:19:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeSuite -->
-        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeTest" is-config="true" duration-ms="14511" started-at="2020-05-02T10:57:15Z" finished-at="2020-05-02T10:57:29Z">
+        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@1ff4931d]" name="BeforeTest" is-config="true" duration-ms="15148" started-at="2021-06-05T02:19:34Z" finished-at="2021-06-05T02:19:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LaunchChromeDriver status=FAILURE method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=LaunchChromeDriver status=FAILURE method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@1ff4931d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="FAIL" signature="LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b]" name="LaunchChromeDriver" duration-ms="6744" started-at="2020-05-02T10:57:29Z" finished-at="2020-05-02T10:57:36Z">
+        <test-method status="FAIL" signature="LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@1ff4931d]" name="LaunchChromeDriver" duration-ms="3821" started-at="2021-06-05T02:19:49Z" finished-at="2021-06-05T02:19:53Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Test case failed due to assert fail expected [true] but found [false]]]>
@@ -64,44 +64,44 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchChromeDriver -->
-        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterTest" is-config="true" duration-ms="1888" started-at="2020-05-02T10:57:36Z" finished-at="2020-05-02T10:57:38Z">
+        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@1ff4931d]" name="AfterTest" is-config="true" duration-ms="1383" started-at="2021-06-05T02:19:53Z" finished-at="2021-06-05T02:19:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=LaunchChromeDriver status=FAILURE method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=LaunchChromeDriver status=FAILURE method=GoogleTestcase.LaunchChromeDriver()[pri:1, instance:Testcase.GoogleTestcase@1ff4931d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="BeforeTest" is-config="true" duration-ms="8853" started-at="2020-05-02T10:57:38Z" finished-at="2020-05-02T10:57:47Z">
+        <test-method status="PASS" signature="BeforeTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@1ff4931d]" name="BeforeTest" is-config="true" duration-ms="10822" started-at="2021-06-05T02:19:54Z" finished-at="2021-06-05T02:20:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ChromeDriverLaunch status=SUCCESS method=GoogleTestcase.ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=ChromeDriverLaunch status=SUCCESS method=GoogleTestcase.ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@1ff4931d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@2925bf5b]" name="ChromeDriverLaunch" duration-ms="4782" started-at="2020-05-02T10:57:47Z" finished-at="2020-05-02T10:57:51Z">
+        <test-method status="PASS" signature="ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@1ff4931d]" name="ChromeDriverLaunch" duration-ms="4247" started-at="2021-06-05T02:20:05Z" finished-at="2021-06-05T02:20:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChromeDriverLaunch -->
-        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterTest" is-config="true" duration-ms="772" started-at="2020-05-02T10:57:51Z" finished-at="2020-05-02T10:57:52Z">
+        <test-method status="PASS" signature="AfterTest(org.testng.ITestResult)[pri:0, instance:Testcase.GoogleTestcase@1ff4931d]" name="AfterTest" is-config="true" duration-ms="808" started-at="2021-06-05T02:20:09Z" finished-at="2021-06-05T02:20:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ChromeDriverLaunch status=SUCCESS method=GoogleTestcase.ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=ChromeDriverLaunch status=SUCCESS method=GoogleTestcase.ChromeDriverLaunch()[pri:2, instance:Testcase.GoogleTestcase@1ff4931d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTest -->
-        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:Testcase.GoogleTestcase@2925bf5b]" name="AfterSuite" is-config="true" duration-ms="383" started-at="2020-05-02T10:57:52Z" finished-at="2020-05-02T10:57:53Z">
+        <test-method status="PASS" signature="AfterSuite()[pri:0, instance:Testcase.GoogleTestcase@1ff4931d]" name="AfterSuite" is-config="true" duration-ms="248" started-at="2021-06-05T02:20:10Z" finished-at="2021-06-05T02:20:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterSuite -->
