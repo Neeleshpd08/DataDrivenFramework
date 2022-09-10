@@ -17,7 +17,7 @@ public class TestBase extends GenericReport {
 	private String Excelpath = "\\Resources\\TestData.xlsx";
 	GetData ExcelData=new GetData(Excelpath);
 	public Browserlaunch launch=new Browserlaunch();
-	String browserName = System.getProperty("browser");
+	String browserName = "chrome";
 			
 	@BeforeSuite
 	public void BeforeSuite() throws IOException {
